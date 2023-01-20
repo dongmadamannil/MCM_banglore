@@ -1,0 +1,36 @@
+:root{
+    --offcanvas-width:270px;
+    --topNavbarHeight:56px;
+}
+.sidebar-nav{
+    width: var(--offcanvas-width);
+}
+@media(min-width: 992px){
+    body{
+        overflow: auto !important;
+    }
+
+    .offcanvas-backdrop::before{
+        display: none;
+    }
+    main{
+        margin-left: var(--offcanvas-width);
+    
+    }
+    .sidebar-nav{
+        transform: none;
+        visibility: visible !important;
+        top: var(--topNavbarHeight);
+        height: calc(100%-var(--topNavbarHeight));
+
+    }
+    iframe{
+        width: 100%;
+        height: 1000px;
+    }
+    
+}
+
+body{
+    margin:0;
+}

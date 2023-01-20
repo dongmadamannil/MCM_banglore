@@ -1,0 +1,31 @@
+.elig{
+    background-color: rgb(42, 97, 137);
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: grey;
+}
+
+hr{
+    text-decoration: dashed;
+    width: 30%;
+    text-align: center;
+}
+
+body::before{
+    display: block;
+    content: '';
+    height: 60px;
+}
+
+
+/* 
+
+started in 2011
+more weightge to means than merit
+fund from teachers,alumni,trust
+
+*/
