@@ -1,147 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="CSS/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!-- ajax -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- ajax -->
 
     <title>Advisor Login</title>
-    <script type = "text/javascript" >
-        //used to call the session checking function everyime
-         setTimeout(" check_ses()", 0);
-         window.onunload=function(){null};
-     </script>
-</head>
-<body >
+    <script type="text/javascript">
+      //used to call the session checking function everyime
+      setTimeout(" check_ses()", 0);
+      window.onunload = function () {
+        null;
+      };
+    </script>
+  </head>
+  <body>
     <!-- navbar starts here-->
 
-    <div class="navbar navbar-expand-lg bg-dark navbar-dark py-lg-3 my-0 fixed-top">
-        <div class="container">
+    <div
+      class="navbar navbar-expand-lg bg-dark navbar-dark py-lg-3 my-0 fixed-top"
+    >
+      <div class="container">
+        <!-- off-canvas trigger -->
+        <button
+          class="navbar-toggler me-2"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasExample"
+          aria-controls="offcanvasExample"
+        >
+          <span
+            class="navbar-toggler-icon"
+            data-bs-target="#offcanvasExample"
+          ></span>
+        </button>
 
-            <!-- off-canvas trigger -->
-            <button class="navbar-toggler me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                <span class="navbar-toggler-icon" data-bs-target="#offcanvasExample"></span>
+        <!-- off-canvas trigger -->
+
+        <a href="#" class="navbar-brand fw-bold me-auto">MCM SCHOLARSHIP</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <div class="dropdown" style="margin-left: 90%">
+            <button
+              class="btn btn-dark bg-dark dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="bi bi-person-fill"></i>
             </button>
+            <ul
+              class="dropdown-menu my-3 mx-1 dropdown-menu-lg-end"
+              aria-labelledby="dropdownMenuButton1"
+            >
+              <li>
+                <a class="dropdown-item" href="login.php"
+                  ><span onclick="lgout()">Log out</span></a
+                >
+              </li>
+            </ul>
+          </div>
 
-            <!-- off-canvas trigger -->
-
-            <a href="#" class="navbar-brand fw-bold me-auto">MCM SCHOLARSHIP</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-           
-            <div class="collapse navbar-collapse" id="navmenu">
-               
-                <div class="dropdown" style="margin-left: 90%;">
-                    <button class="btn btn-dark bg-dark dropdown-toggle"  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="bi bi-person-fill"></i>
-                    </button>
-                    <ul class="dropdown-menu my-3 mx-1  dropdown-menu-lg-end" aria-labelledby="dropdownMenuButton1">
-                      <li><a class="dropdown-item" href="login.php"><span onclick="lgout()">Log out</span></a></li>
-                    </ul>
-                </div>
-
-                <!-- profile actions -->
-            </div>
-            
-            
+          <!-- profile actions -->
         </div>
-        
+      </div>
     </div>
-
 
     <!-- navbar ends here-->
 
-
     <!-- off-canvas starts here -->
 
-        <div class="offcanvas offcanvas-start sidebar-nav my-lg-3 bg-dark text-white" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-            
-            <div class="offcanvas-body py-5">
-                <nav class="navbar-dark">
-                    <ul class="navbar-nav p-3" >
-                        <h4>Advisor Login</h4>
-                        <li class="nav-item">
-                            <a class="nav-link" href="stud_dn.php" target="A">Student List</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="stud_sel.php" target="A">Selected List</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="cnge_psd" target="A">Change Password</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="login.php"><span onclick="lgout()">Log out</span></a>
-                        </li>
-
-                    </ul>
-
-                </nav>
-            </div>
-        </div>
+    <div
+      class="offcanvas offcanvas-start sidebar-nav my-lg-3 bg-dark text-white"
+      tabindex="-1"
+      id="offcanvasExample"
+      aria-labelledby="offcanvasExampleLabel"
+    >
+      <div class="offcanvas-body py-5">
+        <nav class="navbar-dark">
+          <ul class="navbar-nav p-3">
+            <h4>Advisor Login</h4>
+            <li class="nav-item">
+              <a class="nav-link" href="student_list.php" target="A"
+                >Student List</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="stud_sel.php" target="A"
+                >Submitted List</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cnge_psd.php" target="A"
+                >Change Password</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.php"
+                ><span onclick="lgout()">Log out</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
 
     <!-- off-canvas ends here -->
 
-
     <!-- main content starts here-->
     <section class="pt-5">
-        <main >
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12 ">
-                        <iframe src="stud_dn.php" frameborder="0" name="A"></iframe>
-                    </div>
-                </div>
+      <main>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <iframe src="student_list.php" frameborder="0" name="A"></iframe>
             </div>
-        </main>
+          </div>
+        </div>
+      </main>
     </section>
     <script>
-        //used for logout purpose
-function lgout(){
-    //to clear session
-    $.ajax({
-                url: "stud_dn_ajax.php",
-                method: "POST",
-                dataType: "JSON",
-                data: {
-                    idr: 6,
-                         },
-                success: function(resobjri) {
-                  if(resobjri==0)
-{
-}
-                }
-            });
-}
+      //used for logout purpose
+      function lgout() {
+        //to clear session
+        $.ajax({
+          url: "stud_dn_ajax.php",
+          method: "POST",
+          dataType: "JSON",
+          data: {
+            idr: 6,
+          },
+          success: function (resobjri) {
+            if (resobjri == 0) {
+            }
+          },
+        });
+      }
 
-//this function is used to check is the session is active or not
-function check_ses(){
-    $.ajax({
-                url: "stud_dn_ajax.php",
-                method: "POST",
-                dataType: "JSON",
-                data: {
-                    idr: 5,
-                         },
-                success: function(resobjri) {
-                  if(resobjri==0)
-{
-    window.location="unauth.php";
-}
-                }
-            });
-}
-
+      //this function is used to check is the session is active or not
+      function check_ses() {
+        $.ajax({
+          url: "stud_dn_ajax.php",
+          method: "POST",
+          dataType: "JSON",
+          data: {
+            idr: 5,
+          },
+          success: function (resobjri) {
+            if (resobjri == 0) {
+              window.location = "unauth.php";
+            }
+          },
+        });
+      }
     </script>
-
 
     <!-- main content ends here-->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

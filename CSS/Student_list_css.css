@@ -1,0 +1,205 @@
+.viewdt {
+  /*used for styling the view list*/
+  height: 65%;
+  width: 80%;
+  background-color: #d0d4dd;
+  position: absolute;
+  top: 3%;
+  left: 10%;
+  border-radius: 15px;
+  text-transform: uppercase;
+  display: none;
+}
+
+.edt {
+  height: 25px;
+  width: 45%;
+  border-radius: 15px;
+}
+
+.refresh {
+  width: 60px;
+  height: 60px;
+  background-color: #504981;
+  border: none;
+  background-image: url("../img/refresh-page-option.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40%;
+  text-align: center;
+  display: inline-block;
+  border-radius: 5px;
+  float: right;
+  cursor: pointer;
+}
+
+.searchText {
+  width: 68%;
+  padding: 12px 20px;
+  margin-top: 5px;
+  border: 3px solid white;
+}
+
+.searchText:focus {
+  outline: none;
+}
+
+.searchButton {
+  width: 30%;
+  background-color: #504981;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+  float: right;
+}
+
+.searchButton:hover {
+  background-color: #5a576c;
+  color: white;
+  cursor: pointer;
+}
+
+.ButtonwithSearch {
+  width: 100%;
+  display: inline-block;
+  border: 2px solid #504981;
+  background: white;
+  border-radius: 4px;
+}
+
+.searchComp {
+  width: 40%;
+  border: 1px solid #504981;
+  border-radius: 4px;
+  color: white;
+  float: left;
+  background: #504981;
+}
+
+.title {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Details Table */
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+#customers td,
+#customers th {
+  padding: 8px;
+}
+
+#customers tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+  background-color: #ddd;
+}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04aa6d;
+  color: white;
+}
+
+/*For table*/
+.tableCSS {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+.tableCSS td,
+.tableCSS th {
+  padding: 8px;
+}
+
+.tableCSS tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.tableCSS tr:hover {
+  background-color: #ddd;
+}
+
+.tableCSS th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04aa6d;
+  color: white;
+}
+
+.BtnGrp {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  margin-top: 20px;
+}
+
+.Dld_Btn {
+  width: 60px;
+  height: 60px;
+  background-color: #504981;
+  border: none;
+  background-image: url("../img/down-arrow.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40%;
+  text-align: center;
+  display: inline-block;
+  border-radius: 5px;
+  float: right;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.ViewEdit {
+  width: 40%;
+  background-color: #666262;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.selected {
+  width: 100%;
+  background-color: #504981;
+  border: none;
+  color: white;
+  padding: 10 px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+}
